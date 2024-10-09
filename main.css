@@ -1,127 +1,97 @@
-html {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-body {
-	position: relative;
-	padding-bottom: 6rem;
-	min-height: 100%;
+html, body {
+	height: 100%;
+	margin: 0;
+  }
+  
+  body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	margin: 0;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-h1 {
-	text-align: center;
-}
-
-input[type="text"] {
-	height: 25px;
-	width: 250px;
-}
-
-.btn {
-	height: 25px;
-	margin: 0;
-}
-.btn img {
-	width: 13px;
-	height: 13px;
-}
-
-#container {
-	min-height:100%;
-	position:relative;
-	padding:10px;
-	padding-bottom:60px;
-	width: 60%;
-	margin: auto;
-}
-
-#fields {
-	margin-bottom: 20px;
-}
-
-#footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-}
-
-/**
- * Footer Styles
- */
-
-
-/* Footer styles */
-#footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-}
-
-#footer a {
-    color: #000;
-    text-decoration: none;
-}
-
-#footer a:hover {
-    text-decoration: underline;
-}
-
-
-
-/**
-	Tooltip
-*/
-.tooltip-wrap {
-  color: #555;
-  cursor: help;
-  font-family: "Gill Sans", Impact, sans-serif;
-  font-size: 12px;
-	display: inline-block;
-  position: relative;
-  text-align: center;
-  -webkit-transform: translateZ(0); /* webkit flicker fix */
-  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
-}
-
-.tooltip-wrap .tooltip {
-	display: none;
-	position: absolute;
-	z-index: 1;
-	padding: 5px 8px;
-	top: 37px;
-	left: -50%;
-	background-color: #666;
+	background-color: #a9a9aa; /* Grey background for the left and right columns */
+	padding: 0;
+  }
+  
+  #sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 200px; /* Sidebar width */
+	background-color: #444; /* Darker grey for the sidebar */
+	padding-top: 20px;
+  }
+  
+  #sidebar ul {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  #sidebar ul li {
+	margin: 20px 0;
+  }
+  
+  #sidebar ul li a {
+	text-decoration: none;
 	color: white;
-	border-radius: 3px;
-}
-
-/* CSS Triangle */
-.tooltip-wrap .tooltip:after {
-	width: 0;
-	height: 0;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	border-bottom: 8px solid #666;
-	top: -8px;
-	content: " ";
-	height: 0;
-	left: 50%;
-	margin-left: -15%;
-	position: absolute;
-	width: 0;
-}
+	font-size: 18px;
+	padding: 10px 20px;
+	display: block;
+  }
+  
+  #sidebar ul li a:hover {
+	background-color: #666; /* Lighter grey on hover */
+	border-radius: 4px;
+  }
+  
+  #container {
+	margin-left: 220px; /* Adjust for the sidebar width */
+	width: 60%; /* Central column width */
+	background-color: white;
+	padding: 20px;
+	min-height: 100vh; /* Ensures the container fills the full height of the page */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  }
+  
+  h1, p {
+	text-align: center;
+  }
+  
+  /* Footer styles */
+  #footer {
+	background-color: #f1f1f1;
+	text-align: center;
+	padding: 10px 0;
+	width: 100%;
+	font-size: 14px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+  }
+  
+  /* Right Sidebar styling */
+#right-sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 200px; /* Width of the right sidebar */
+	background-color: #444; /* Darker grey for the right sidebar */
+	padding-top: 20px;
+	color: white; /* Text color for visibility */
+  }
+  
+  #right-sidebar h2 {
+	text-align: center;
+  }
+  
+  #right-sidebar p {
+	padding: 10px 15px; /* Padding for the paragraphs */
+  }
+  
+  /* Adjust the main content container */
+  #container {
+	margin-left: 220px; /* Adjust for the left sidebar width */
+	margin-right: 220px; /* Make space for the right sidebar */
+	width: auto; /* Allow the container to adjust automatically */
+	background-color: white;
+	padding: 20px;
+	min-height: 100vh; /* Ensure full page height */
+  }
