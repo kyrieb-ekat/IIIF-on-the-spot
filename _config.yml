@@ -1,3 +1,7 @@
+---
+---
+
+@import "{{ architect.theme }}";
 title: IIIF Download 
 description: Downloading a IIIF manifest, with more tricks to come!
 remote_theme: pages-themes/architect@v0.2.0
